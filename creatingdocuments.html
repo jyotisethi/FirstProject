@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=shift_jis">
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+
+    
+
+    
+
+    <title>ドキュメントの作成</title>
+    <meta name="Title" content="ドキュメントの作成"/>    
+    
+    <script src="script/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script"></script>
+    <script src="script/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
+    <link rel="styleSheet" type="text/css" href="stylesheets/jquery-ui-1.8.18.custom.css" />
+    <link rel="styleSheet" type="text/css" href="stylesheets/jquery.qtip.css" />
+	
+    
+	
+
+    <meta name="Description" content="
+    全て展開
+
+
+
+    すべて折りたたむ
+このセクションでは、PDF for .NET の使用方法について説明します。
+
+" />
+    
+    <link rel="styleSheet" type="text/css" href="stylesheets/topics.2012.css" data-mshv2-stylesheet="/stylesheets/topics.2012.mshv2.css" data-mshv1-stylesheet="/stylesheets/topics.2012.mshv1.css" />
+    <script src="script/topics.jqueryplugins.2012.min.js" type="text/javascript"></script>
+    <script src="script/topics.2012.js" type="text/javascript"></script>
+    
+    <meta name="Microsoft.Help.Id" content="8c6bc0d6-f47a-42ce-9770-5acf642d13c8"/>
+    <meta name="Microsoft.Help.TocParent" content="d033c667-4e37-4547-af93-f1f4a4eb752b"/>
+    <meta name="Microsoft.Help.TocOrder" content="1"/>
+    <meta name="Microsoft.Help.F1" content=""/>
+    <meta name="Microsoft.Help.ContentType" content="Concepts" />
+    
+    
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-expandcollapse.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/slimbox2.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-jquery-common.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-jquery-slimbox.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-jquery-expand.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-boxes.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/customstyles.css"></link>
+    <script src="script/hs-expandcollapse.js" type="text/javascript"></script>
+    <script src="script/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="script/slimbox2.js" type="text/javascript"></script>
+    <script src="script/hs-jquery-common.js" type="text/javascript"></script>
+    <script src="script/jquery-expand.js" type="text/javascript"></script>
+    <script src="script/jquery.fitvids.js" type="text/javascript"></script>
+    <script src="script/swfobject.js" type="text/javascript"></script>
+
+    
+    
+
+    
+
+    <!-- Google Analytics -->
+<script>
+if (location.protocol == "http:" || location.protocol == "https:") {
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-20295802-3', 'auto');
+ga('send', 'pageview');
+}
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+    <div id="BeforeHeaderContent">
+        
+    </div>
+    <div id="HeaderContent">
+        
+            
+            <div id="ProjectTitle">PDF for .NET</div>
+        <div id="PageTitle"><div id="PageTitleText">ドキュメントの作成</div></div>
+    </div>
+    <div id="AfterHeaderContent">
+        <!-- Spacing --> <span id="ToggleAllSectionsLink" class="FunctionLink">
+                <label id="CollapseAllLabel">すべて折りたたむ</label>
+                <label id="ExpandAllLabel" style="display: none;">全て展開</label>
+            </span>
+        
+    </div>
+    <div class="BreadcrumbsContainer"><table><tr><td>
+<a href="usingcomponentonepdf.html">PDF for .NET の使い方</a>
+ > ドキュメントの作成</td></tr></table></div>
+    
+    
+    <div id="BodyContent">
+        <div id="HSShowAll" align="right">
+    <a onclick="showAllDropDownSections();" href="#"><img border="0" alt="全て展開" src="images/hs-toggler-collapsed.png" />全て展開</a>
+</div>
+
+<div id="HSHideAll" align="right">
+    <a onclick="hideAllDropDownSections();" href="#"><img border="0" alt="すべて折りたたむ" src="images/hs-toggler-expanded.png" />すべて折りたたむ</a>
+</div>このセクションでは、<strong>PDF for .NET</strong> の使用方法について説明します。
+
+<p></p>
+
+<p>このセクションでは、C1Pdf を使用した最もシンプルなアプリケーションを作成します。C1Pdf を初めて使う人でも、手順に従って簡単に PDF ファイルを作成することができます。このトピックでは、"Hello World" というテキストを含む PDF ファイルを作成する方法について説明します。</p>
+
+<ol>
+    <li>Windows フォームアプリケーションを作成して、フォームに C1PdfDocument コントロールを追加します。
+
+        <p class="hs-toggler">Visual Basic コードの書き方</p>
+
+        <div class="hs-toggler-container" style="DISPLAY: none">
+            <div class="FilteredContentVB" data-title="VB" data-itemid="VB">
+                <table class="SyntaxTable">
+                    <tbody>
+                        <tr>
+                            <th>Visual Basic</th>
+
+                            <th>
+                                <div class="CopyCodeWrapper">
+                                    <span class="CopyCode">コードのコピー</span>
+                                </div>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <pre>
+Imports System.Drawing
+</pre>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <p class="hs-toggler">C# コードの書き方</p>
+
+        <div class="hs-toggler-container" style="DISPLAY: none">
+            <div class="FilteredContentCS" data-title="CS" data-itemid="CS">
+                <table class="SyntaxTable">
+                    <tbody>
+                        <tr>
+                            <th>C#</th>
+
+                            <th>
+                                <div class="CopyCodeWrapper">
+                                    <span class="CopyCode">コードのコピー</span>
+                                </div>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <pre>
+using System.Drawing;
+</pre>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </li>
+
+    <li>フォームのソースコードに次の <strong>Imports</strong> または <strong>using</strong> ディレクティブを追加します。
+
+        <p class="hs-toggler">Visual Basic コードの書き方<br /></p>
+
+        <div class="hs-toggler-container" style="DISPLAY: none">
+            <div class="FilteredContentVB" data-title="VB" data-itemid="VB">
+                <table class="SyntaxTable">
+                    <tbody>
+                        <tr>
+                            <th>Visual Basic</th>
+
+                            <th>
+                                <div class="CopyCodeWrapper">
+                                    <span class="CopyCode">コードのコピー</span>
+                                </div>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <pre>
+<font color="green">' コンテンツをドキュメントに追加します。</font>
+Dim font As Font = New Font("Arial",12)
+C1PdfDocument1.DrawString("Hello World!", font, Brushes.Black, PointF.Empty)
+</pre>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <p class="hs-toggler">C# コードの書き方<br /></p>
+
+        <div class="hs-toggler-container" style="DISPLAY: none">
+            <div class="FilteredContentCS" data-title="CS" data-itemid="CS">
+                <table class="SyntaxTable">
+                    <tbody>
+                        <tr>
+                            <th>C#</th>
+
+                            <th>
+                                <div class="CopyCodeWrapper">
+                                    <span class="CopyCode">コードのコピー</span>
+                                </div>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <pre>
+<font color="green">//コンテンツをドキュメントに追加します。</font>
+Font font = new Font("Arial", 12);<br />c1PdfDocument1.DrawString("Hello World!", font, Brushes.Black, PointF.Empty);
+</pre>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </li>
+
+    <li>デザイン画面でフォームをダブルクリックして、<strong>Form_Load</strong> イベントハンドラに次のコードを記述します。これでテキストが PDF ドキュメントに追加されます。
+
+        <p class="hs-toggler">Visual Basic コードの書き方<br /></p>
+
+        <div class="hs-toggler-container" style="DISPLAY: none">
+            <div class="FilteredContentVB" data-title="VB" data-itemid="VB">
+                <table class="SyntaxTable">
+                    <tbody>
+                        <tr>
+                            <th>Visual Basic</th>
+
+                            <th>
+                                <div class="CopyCodeWrapper">
+                                    <span class="CopyCode">コードのコピー</span>
+                                </div>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <pre>
+<font color="green" tcolor="#008000" tsize="undefined" texisting="true">' コンテンツをドキュメントに追加します。</font>
+ 
+
+Dim font As Font = New Font("Arial",12) 
+</pre>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <p class="hs-toggler">C# コードの書き方<br /></p>
+
+        <div class="hs-toggler-container" style="DISPLAY: none">
+            <div class="FilteredContentCS" data-title="CS" data-itemid="CS">
+                <table class="SyntaxTable">
+                    <tbody>
+                        <tr>
+                            <th>C#</th>
+
+                            <th>
+                                <div class="CopyCodeWrapper">
+                                    <span class="CopyCode">コードのコピー</span>
+                                </div>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <pre>
+<font color="green" tcolor="#008000" tsize="undefined" texisting="true">// コンテンツをドキュメントに追加します。</font>
+RectangleF rect = pdf.PageRectangle;
+
+Font font = new Font("Arial", 12);
+</pre>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </li>
+
+    <li>
+        <strong>Save</strong> メソッドを使用して、ドキュメントをファイルまたはストリームに保存します。
+
+        <p class="hs-toggler">Visual Basic コードの書き方<br /></p>
+
+        <div class="hs-toggler-container" style="DISPLAY: none">
+            <div class="FilteredContentVB" data-title="VB" data-itemid="VB">
+                <table class="SyntaxTable">
+                    <tbody>
+                        <tr>
+                            <th>Visual Basic</th>
+
+                            <th>
+                                <div class="CopyCodeWrapper">
+                                    <span class="CopyCode">コードのコピー</span>
+                                </div>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <pre>
+<font color="green">'ドキュメントをファイルに保存します。</font>
+C1PdfDocument1.Save("c:\HelloWorld.pdf")
+</pre>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <p class="hs-toggler">C# コードの書き方<br /></p>
+
+        <div class="hs-toggler-container" style="DISPLAY: none">
+            <div class="FilteredContentCS" data-title="CS" data-itemid="CS">
+                <table class="SyntaxTable">
+                    <tbody>
+                        <tr>
+                            <th>C#</th>
+
+                            <th>
+                                <div class="CopyCodeWrapper">
+                                    <span class="CopyCode">コードのコピー</span>
+                                </div>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <pre>
+<font color="green">//ドキュメントをファイルに保存します。</font>
+c1PdfDocument1.Save(@"c:\HelloWorld.pdf");
+</pre>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </li>
+</ol>
+
+<p>アプリケーションを実行すると、C ドライブの直下に「HelloWorld.pdf」という PDF ファイルが作成されます。</p><br />
+<img alt="" src="images_JP/HelloWorld.png" />
+
+<p>手順 3 では、<strong>Font</strong> オブジェクトを作成して DrawString メソッドを呼び出し、「Hello World!」というテキストを描画しています。これは、.NET Framework の <strong>Graphics</strong> オブジェクトとまったく同じ操作方法であるため、C1Pdf は非常に使いやすくなっています。</p>
+
+<p>覚えておかなければならない重要なことは<strong>、PDF for .NET</strong> ではページの左上隅に起点を持つポイントベースの座標システムを使用することです。これは、.NET で使用されるデフォルトの座標システムと似ており、デフォルトの PDF 座標システム（起点はページの左下隅）とは異なります。この例では、「Hello World」の「H」の左上ポイントは [1,1] にあります。</p>
+
+<p>座標システムがピクセルでなく、ポイントに基づくため、<strong>PDF for .NET</strong> は float 型のメンバを持つ <strong>RectangleF</strong>、<strong>SizeF</strong>、および <strong>PointF</strong> 構造体を使用し、<strong>int</strong> 型のメンバを持つ Rectangle、Size、および Point は使用しません。</p>
+            <a name="seealsobookmark"></a>
+            
+        
+    </div>
+    <div id="FooterContent">
+        
+<p>&nbsp;</p><p>&nbsp;</p><hr style="height: 1px" /><p>Copyright &copy; GrapeCity inc. All rights reserved.
+<script>
+$(document).ready(function() {
+  if (!(window.self !== window.top)) {
+    // Not running in a frameset
+    // Get the page name
+    var pageName = location.href.substring(location.href.lastIndexOf("/") + 1);
+    if (pageName.indexOf("#") != -1) {
+      pageName = pageName.substring(0, pageName.indexOf("#"));
+    }
+    // Append to index.html
+    var framePage = "index.html#" + pageName;
+    location.href = framePage;
+  }
+});
+</script></p>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=shift_jis">
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+
+    
+
+    
+
+    <title>グラフィックの描画</title>
+    <meta name="Title" content="グラフィックの描画"/>    
+    
+    <script src="script/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script"></script>
+    <script src="script/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
+    <link rel="styleSheet" type="text/css" href="stylesheets/jquery-ui-1.8.18.custom.css" />
+    <link rel="styleSheet" type="text/css" href="stylesheets/jquery.qtip.css" />
+	
+    
+	
+
+    <meta name="Description" content="
+    全て展開
+
+
+
+    すべて折りたたむ
+
+
+C1PdfDocument クラスは、線、四角形、楕円、扇形、円弧、丸角の四角形、ポリゴン、ベジェ曲線などのグラフィカル要素をドキュメントに追加するいくつかのメソッドを提供します。" />
+    
+    <link rel="styleSheet" type="text/css" href="stylesheets/topics.2012.css" data-mshv2-stylesheet="/stylesheets/topics.2012.mshv2.css" data-mshv1-stylesheet="/stylesheets/topics.2012.mshv1.css" />
+    <script src="script/topics.jqueryplugins.2012.min.js" type="text/javascript"></script>
+    <script src="script/topics.2012.js" type="text/javascript"></script>
+    
+    <meta name="Microsoft.Help.Id" content="0d44c62b-abe4-41bf-8df5-c2bf4426d0a9"/>
+    <meta name="Microsoft.Help.TocParent" content="d033c667-4e37-4547-af93-f1f4a4eb752b"/>
+    <meta name="Microsoft.Help.TocOrder" content="4"/>
+    <meta name="Microsoft.Help.F1" content=""/>
+    <meta name="Microsoft.Help.ContentType" content="Concepts" />
+    
+    
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-expandcollapse.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/slimbox2.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-jquery-common.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-jquery-slimbox.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-jquery-expand.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-boxes.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/customstyles.css"></link>
+    <script src="script/hs-expandcollapse.js" type="text/javascript"></script>
+    <script src="script/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="script/slimbox2.js" type="text/javascript"></script>
+    <script src="script/hs-jquery-common.js" type="text/javascript"></script>
+    <script src="script/jquery-expand.js" type="text/javascript"></script>
+    <script src="script/jquery.fitvids.js" type="text/javascript"></script>
+    <script src="script/swfobject.js" type="text/javascript"></script>
+
+    
+    
+
+    
+
+    <!-- Google Analytics -->
+<script>
+if (location.protocol == "http:" || location.protocol == "https:") {
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-20295802-3', 'auto');
+ga('send', 'pageview');
+}
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+    <div id="BeforeHeaderContent">
+        
+    </div>
+    <div id="HeaderContent">
+        
+            
+            <div id="ProjectTitle">PDF for .NET</div>
+        <div id="PageTitle"><div id="PageTitleText">グラフィックの描画</div></div>
+    </div>
+    <div id="AfterHeaderContent">
+        <!-- Spacing --> <span id="ToggleAllSectionsLink" class="FunctionLink">
+                <label id="CollapseAllLabel">すべて折りたたむ</label>
+                <label id="ExpandAllLabel" style="display: none;">全て展開</label>
+            </span>
+        
+    </div>
+    <div class="BreadcrumbsContainer"><table><tr><td>
+<a href="usingcomponentonepdf.html">PDF for .NET の使い方</a>
+ > グラフィックの描画</td></tr></table></div>
+    
+    
+    <div id="BodyContent">
+        <div id="HSShowAll" align="right">
+    <a onclick="showAllDropDownSections();" href="#"><img border="0" alt="全て展開" src="images/hs-toggler-collapsed.png" />全て展開</a>
+</div>
+
+<div id="HSHideAll" align="right">
+    <a onclick="hideAllDropDownSections();" href="#"><img border="0" alt="すべて折りたたむ" src="images/hs-toggler-expanded.png" />すべて折りたたむ</a>
+</div>
+
+<p><a href="C1.C1Pdf.4~C1.C1Pdf.C1PdfDocument.html">C1PdfDocument</a> クラスは、線、四角形、楕円、扇形、円弧、丸角の四角形、ポリゴン、ベジェ曲線などのグラフィカル要素をドキュメントに追加するいくつかのメソッドを提供します。</p>
+
+<p>これらのメソッドは、.NET の <strong>Graphics</strong> クラスにあるメソッドのサブセットであり、同じ <strong>Brush</strong> クラスと <strong>Pen</strong> クラスを使用して線や塗り潰し領域の色とスタイルを制御します</p>
+
+<p><strong>C1Pdf</strong> では、ポイント単位の座標システムを使用しており、原点はページの左上に配置されることに注意してください（.NET の <strong>Graphics</strong> クラスのデフォルトの座標システムはピクセルベースです）。</p>
+
+<p>以下の例では、<strong>C1Pdf と</strong> .NET の <strong>Graphics</strong> クラスのグラフィックスメソッドがどの程度類似しているかを示しています。サンプルコードは、g という C1PdfDocument クラスを宣言し、扇形、スプライン、およびその他のグラフィカル要素を描画するメソッドを呼び出します。</p>
+
+<p>このサンプルコードの要点は、C1PdfDocument クラスを通常の .NET <strong>Graphics</strong> オブジェクトと置き換えたとき、コードをコンパイルして同じ結果を得られるという点にあります。</p>
+
+<p class="hs-toggler">Visual Basic コードの書き方<br /></p>
+
+<div class="hs-toggler-container" style="DISPLAY: none">
+    <div class="FilteredContentVB" data-title="VB" data-itemid="VB">
+        <table class="SyntaxTable">
+            <tbody>
+                <tr>
+                    <th>Visual Basic</th>
+
+                    <th>
+                        <div class="CopyCodeWrapper">
+                            <span class="CopyCode">コードのコピー</span>
+                        </div>
+                    </th>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <pre>
+<font color="green">'PDF ドキュメントを作成します。</font>
+Dim g As New C1.C1Pdf.C1PdfDocument()
+<font color="green">'描画を設定します。</font>
+Dim rect As New RectangleF(0, 0, 300, 200)
+Dim text As String = "Hello world of .NET Graphics and PDF."  ControlChars.Cr + ControlChars.Lf + "Nice to meet you."
+Dim font As New Font("Times New Roman ", 12, FontStyle.Italic Or FontStyle.Underline)
+Dim bezierPoints() As PointF = { _
+ New PointF(10F, 100F), New PointF(20F, 10F),, _
+ New PointF(35F, 50F), New PointF(50F, 100F), _<br /> New PointF(60F, 150F), New PointF(65F, 100F), _<br /> New PointF(50F, 50F)}
+<font color="green">'いくつかのパイスライスを描画します。</font>
+Dim startAngle As Single
+Dim penWidth As Integer = 0 
+Dim penRGB As Integer = 0 
+g.FillPie(Brushes.Red, rect, 0, 20F)
+g.FillPie(Brushes.Green, rect, 20F, 30F)
+g.FillPie(Brushes.Blue, rect, 60F, 12F)
+g.FillPie(Brushes.Gold, rect, - 80F, - 20F)
+<font color="green">'いくつかの円弧を描画します。</font>
+Dim startAngle As Single
+For startAngle = 0 To 360 - 40 Step 40
+  Dim penColor As Color = Color.FromArgb(penRGB, penRGB, penRGB)
+  penWidth = penWidth + 1
+  penWidth = penWidth + 1
+  penRGB = penRGB + 20
+  g.DrawArc(pen, rect, startAngle, 40F)
+}
+<font color="green">'1つの四角形といくつかのベジェスプライン曲線を描画します。</font>
+g.DrawRectangle(Pens.Red, rect);
+g.DrawBeziers(Pens.Blue, bezierPoints);
+g.DrawString(text, font, Brushes.Black, rect);
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<p class="hs-toggler">C#コードの書き方</p>
+
+<div class="hs-toggler-container" style="DISPLAY: none">
+    <div class="FilteredContentCS" data-title="CS" data-itemid="CS">
+        <table class="SyntaxTable">
+            <tbody>
+                <tr>
+                    <th>C#</th>
+
+                    <th>
+                        <div class="CopyCodeWrapper">
+                            <span class="CopyCode">コードのコピー</span>
+                        </div>
+                    </th>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <pre>
+<span style="COLOR: #008000">// PDF ドキュメントを作成します。
+</span>C1.C1Pdf.C1PdfDocument g = <span style="COLOR: #0000ff">new</span> C1.C1Pdf.C1PdfDocument();
+<span style="COLOR: #008000">// 描画を設定します。
+</span>RectangleF rect = <span style="COLOR: #0000ff">new</span> RectangleF(0,0,300,200);
+ <span style="COLOR: #0000ff">string</span> text = <span style="COLOR: #800000">"Hello world of .NET Graphics and PDF.\r\n"</span> + <span style="COLOR: #800000">"Nice to meet you."</span>;
+ Font font = <span style="COLOR: #0000ff">new</span> Font(<span style="COLOR: #800000">"Times New Roman"</span>, 12, FontStyle.Italic
+ PointF[] bezierPoints = <span style="COLOR: #0000ff">new</span> PointF[]
+ {
+ <span style="COLOR: #0000ff">new</span> PointF(10f, 100f), <span style="COLOR: #0000ff">new</span> PointF(20f, 10f),
+ <span style="COLOR: #0000ff">new</span> PointF(35f, 50f), <span style="COLOR: #0000ff">new</span> PointF(50f, 100f),
+ <span style="COLOR: #0000ff">new</span> PointF(60f, 150f), <span style="COLOR: #0000ff">new</span> PointF(65f, 100f),
+ <span style="COLOR: #0000ff">new</span> PointF(50f, 50f)
+ };
+<span style="COLOR: #008000">// いくつかのパイスライスを描画します。
+</span><span style="COLOR: #0000ff">int</span> penWidth = 0;
+ <span style="COLOR: #0000ff">int</span> penRGB = 0;
+ g.FillPie(Brushes.Red, rect, 0, 20f);
+ g.FillPie(Brushes.Green, rect, 20f, 30f);
+ g.FillPie(Brushes.Blue, rect, 60f, 12f);
+ g.FillPie(Brushes.Gold, rect, -80f, -20f);
+<span style="COLOR: #008000">// いくつかの円弧を描画します。
+</span><span style="COLOR: #0000ff">for</span> (<span style="COLOR: #0000ff">float</span> startAngle = 0; startAngle 360; startAngle += 40)
+ {
+ Color penColor = Color.FromArgb(penRGB, penRGB, penRGB);
+ Pen pen = <span style="COLOR: #0000ff">new</span> Pen(penColor, penWidth++);
+ penRGB = penRGB + 20;
+ g.DrawArc(pen, rect, startAngle, 40f);
+ }
+<span style="COLOR: #008000">// １つの四角形といくつかのベジェスプライン曲線を描画します。
+</span>g.DrawRectangle(Pens.Red, rect);
+ g.DrawBeziers(Pens.Blue, bezierPoints);
+ g.DrawString(text, font, Brushes.Black, rect);
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<p>実行結果は以下のようになります。<br />
+<img alt="" src="Images_JP/Shapes.png" /></p>
+            <a name="seealsobookmark"></a>
+            
+        
+    </div>
+    <div id="FooterContent">
+        
+<p>&nbsp;</p><p>&nbsp;</p><hr style="height: 1px" /><p>Copyright &copy; GrapeCity inc. All rights reserved.
+<script>
+$(document).ready(function() {
+  if (!(window.self !== window.top)) {
+    // Not running in a frameset
+    // Get the page name
+    var pageName = location.href.substring(location.href.lastIndexOf("/") + 1);
+    if (pageName.indexOf("#") != -1) {
+      pageName = pageName.substring(0, pageName.indexOf("#"));
+    }
+    // Append to index.html
+    var framePage = "index.html#" + pageName;
+    location.href = framePage;
+  }
+});
+</script></p>
+
+    </div>
+    
+</body>
+</html>

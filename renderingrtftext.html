@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=shift_jis">
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+
+    
+
+    
+
+    <title>複雑な RTF テキストの描画</title>
+    <meta name="Title" content="複雑な RTF テキストの描画"/>    
+    
+    <script src="script/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script"></script>
+    <script src="script/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
+    <link rel="styleSheet" type="text/css" href="stylesheets/jquery-ui-1.8.18.custom.css" />
+    <link rel="styleSheet" type="text/css" href="stylesheets/jquery.qtip.css" />
+	
+    
+	
+
+    <meta name="Description" content="
+    全て展開
+
+
+
+    すべて折りたたむ
+
+
+PDF for .NET のもう１つの強力な機能は、DrawStringRtf  メソッドを使用してリッチテキストフォーマット（RTF）テキストを表示する機能です。主に RTF を作成するツールが非常に多く、RTF によるテンプレートの作成、アプリケーションのカスタマイズ、RTF 文字列の表示が容易なので、この機能は非常に便利です。これにより、十分に書式設定された実用的なドキュメントを、コードを記述することなく簡単に作成でき" />
+    
+    <link rel="styleSheet" type="text/css" href="stylesheets/topics.2012.css" data-mshv2-stylesheet="/stylesheets/topics.2012.mshv2.css" data-mshv1-stylesheet="/stylesheets/topics.2012.mshv1.css" />
+    <script src="script/topics.jqueryplugins.2012.min.js" type="text/javascript"></script>
+    <script src="script/topics.2012.js" type="text/javascript"></script>
+    
+    <meta name="Microsoft.Help.Id" content="d313f623-bd75-4c0d-a787-36e3e3415bac"/>
+    <meta name="Microsoft.Help.TocParent" content="d033c667-4e37-4547-af93-f1f4a4eb752b"/>
+    <meta name="Microsoft.Help.TocOrder" content="9"/>
+    <meta name="Microsoft.Help.F1" content=""/>
+    <meta name="Microsoft.Help.ContentType" content="Concepts" />
+    
+    
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-expandcollapse.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/slimbox2.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-jquery-common.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-jquery-slimbox.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-jquery-expand.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-boxes.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/customstyles.css"></link>
+    <script src="script/hs-expandcollapse.js" type="text/javascript"></script>
+    <script src="script/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="script/slimbox2.js" type="text/javascript"></script>
+    <script src="script/hs-jquery-common.js" type="text/javascript"></script>
+    <script src="script/jquery-expand.js" type="text/javascript"></script>
+    <script src="script/jquery.fitvids.js" type="text/javascript"></script>
+    <script src="script/swfobject.js" type="text/javascript"></script>
+
+    
+    
+
+    
+
+    <!-- Google Analytics -->
+<script>
+if (location.protocol == "http:" || location.protocol == "https:") {
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-20295802-3', 'auto');
+ga('send', 'pageview');
+}
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+    <div id="BeforeHeaderContent">
+        
+    </div>
+    <div id="HeaderContent">
+        
+            
+            <div id="ProjectTitle">PDF for .NET</div>
+        <div id="PageTitle"><div id="PageTitleText">複雑な RTF テキストの描画</div></div>
+    </div>
+    <div id="AfterHeaderContent">
+        <!-- Spacing --> <span id="ToggleAllSectionsLink" class="FunctionLink">
+                <label id="CollapseAllLabel">すべて折りたたむ</label>
+                <label id="ExpandAllLabel" style="display: none;">全て展開</label>
+            </span>
+        
+    </div>
+    <div class="BreadcrumbsContainer"><table><tr><td>
+<a href="usingcomponentonepdf.html">PDF for .NET の使い方</a>
+ > 複雑な RTF テキストの描画</td></tr></table></div>
+    
+    
+    <div id="BodyContent">
+        <div id="HSShowAll" align="right">
+    <a onclick="showAllDropDownSections();" href="#"><img border="0" alt="全て展開" src="images/hs-toggler-collapsed.png" />全て展開</a>
+</div>
+
+<div id="HSHideAll" align="right">
+    <a onclick="hideAllDropDownSections();" href="#"><img border="0" alt="すべて折りたたむ" src="images/hs-toggler-expanded.png" />すべて折りたたむ</a>
+</div>
+
+<p><strong>PDF for .NET</strong> のもう１つの強力な機能は、<a href="C1.C1Pdf.4~C1.C1Pdf.C1PdfDocument~DrawStringRtf.html">DrawStringRtf</a>&nbsp; メソッドを使用してリッチテキストフォーマット（RTF）テキストを表示する機能です。主に RTF を作成するツールが非常に多く、RTF によるテンプレートの作成、アプリケーションのカスタマイズ、RTF 文字列の表示が容易なので、この機能は非常に便利です。これにより、十分に書式設定された実用的なドキュメントを、コードを記述することなく簡単に作成できるようになります。</p>
+
+<p>たとえば、以下のコードはワードパッドによって作成された RTF テンプレートを使用しています。このコードは、ディレクトリをスキャンし、テンプレートに基づいて RTF 文字列をビルドし、DrawStringRtf メソッドを使用して RTF を表示します。</p>
+
+<p class="hs-toggler">Visual Basic コードの書き方<br /></p>
+
+<div class="hs-toggler-container" style="DISPLAY: none">
+    <div class="FilteredContentVB" data-title="VB" data-itemid="VB">
+        <table class="SyntaxTable">
+            <tbody>
+                <tr>
+                    <th>Visual Basic</th>
+
+                    <th>
+                        <div class="CopyCodeWrapper">
+                            <span class="CopyCode">コードのコピー</span>
+                        </div>
+                    </th>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <pre>
+<font color="green">' RTF テンプレートを取得します。</font>
+Dim rtfHdr As String = "" &amp; _ 
+   "{\rtf1\ansi\ansicpg1252\deff0\deflang1033" &amp; 
+   "{\fonttbl{\f0\fswiss\fcharset0 " &amp; _ 
+   "Arial;}{\f1\froman\fprq2\fcharset0 Book Antiqua;}}" &amp;  _
+   "{\colortbl ;\red0\green0\blue0;}" &amp; _ 
+   "\viewkind4\uc1\pard\f0\fs20\par" &amp; _
+   "\pard\tx1440\tx2880\tx4320\tx5760\cf1\b\f1\fs24 " &amp; _ 
+   "Directory Report created on &lt;&lt;TODAY&gt;&gt;\par" &amp; _
+   "\ul\par Name\tab Extension\tab Size\tab Date\tab " &amp; _
+   "Attributes\par"
+Dim rtfEntry As String = "" &amp; _ 
+   "\cf0\ulnone\b0\f0\fs16 &lt;&lt;NAME&gt;&gt;\tab " &amp; __
+   "&lt;&lt;EXT&gt;&gt;\tab &lt;&lt;SIZE&gt;&gt;\tab &lt;&lt;DATE&gt;&gt;\tab &lt;&lt;ATTS&gt;&gt;\par"
+ <font color="green">  ' RTF 文字列をビルドします。</font>
+Dim sb As New StringBuilder()
+sb.Append(rtfHdr.Replace("&lt;&lt;TODAY&gt;&gt;", DateTime.Today.ToShortDateString()))
+For Each file in Directory.GetFiles(@"c:\winnt", "*.bmp")
+For Each file in Directory.GetFiles(@"c:\winnt", "*.bmp")
+   Dim s As String = rtfEntry
+   Dim fi As FileInfo = New FileInfo(file)
+   s = s.Replace("&lt;&lt;NAME&gt;&gt;", Path.GetFileNameWithoutExtension(file));
+   s = s.Replace("&lt;&lt;EXT&gt;&gt;",  fi.Extension);
+   s = s.Replace("&lt;&lt;SIZE&gt;&gt;", string.Format("{0:#,##0}", fi.Length));
+   ss = s.Replace("&lt;&lt;DATE&gt;&gt;", fi.LastWriteTime.ToShortDateString());ring())
+   s = s.Replace("&lt;&lt;ATTS&gt;&gt;", fi.Attributes.ToString())
+   sb.Append(s)
+Next
+sb.Append("}")
+ <font color="green">' RTF 文字列を表示します。</font>
+Dim _c1pdf As New C1PdfDocument()
+Dim rect As RectangleF = _c1pdf.PageRectangle
+rect.Inflate(-72, -72)
+_c1pdf.DrawStringRtf(sb.ToString(), Font, Brushes.Black, rect)
+ <font color="green">' 保存します。</font>
+_c1pdf.Save("c:\temp\dir.pdf")
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<p class="hs-toggler">C# コードの書き方<br /></p>
+
+<div class="hs-toggler-container" style="DISPLAY: none">
+    <div class="FilteredContentCS" data-title="CS" data-itemid="CS">
+        <table class="SyntaxTable">
+            <tbody>
+                <tr>
+                    <th>C#</th>
+
+                    <th>
+                        <div class="CopyCodeWrapper">
+                            <span class="CopyCode">コードのコピー</span>
+                        </div>
+                    </th>
+                </tr>
+
+                <tr>
+                    <td colspan="2">// RTF テンプレートを取得します。<br />
+                    string rtfHdr = @"{\rtf1\ansi\ansicpg1252\deff0\deflang1033" +<br />
+                    @"{\fonttbl{\f0\fswiss\fcharset0 " +<br />
+                    @"Arial;}{\f1\froman\fprq2\fcharset0 Book Antiqua;}}" +<br />
+                    @"{\colortbl ;\red0\green0\blue0;}" +<br />
+                    @"\viewkind4\uc1\pard\f0\fs20\par" +<br />
+                    @"\pard\tx1440\tx2880\tx4320\tx5760\cf1\b\f1\fs24 " +<br />
+                    @"Directory Report created on &lt;&lt;TODAY&gt;&gt;\par" +<br />
+                    @"\ul\par Name\tab Extension\tab Size\tab Date\tab " +<br />
+                    @"Attributes\par";<br />
+                    string rtfEntry = @"\cf0\ulnone\b0\f0\fs16 &lt;&lt;NAME&gt;&gt;\tab " +<br />
+                    @"&lt;&lt;EXT&gt;&gt;\tab &lt;&lt;SIZE&gt;&gt;\tab &lt;&lt;DATE&gt;&gt;\tab &lt;&lt;ATTS&gt;&gt;\par";<br />
+                    <font color="green">// RTF 文字列をビルドします。</font><br />
+                    StringBuilder sb = new StringBuilder();<br />
+                    sb.Append(rtfHdr.Replace("&lt;&lt;TODAY&gt;&gt;", DateTime.Today.ToShortDateString()));<br />
+                    foreach (string file in Directory.GetFiles(@"c:\winnt", "*.bmp"))<br />
+                    {<br />
+                    string s = rtfEntry;<br />
+                    FileInfo fi = new FileInfo(file);<br />
+                    s = s.Replace("&lt;&lt;NAME&gt;&gt;", Path.GetFileNameWithoutExtension(file));<br />
+                    s = s.Replace("&lt;&lt;EXT&gt;&gt;", fi.Extension);<br />
+                    s = s.Replace("&lt;&lt;SIZE&gt;&gt;", string.Format("{0:#,##0}", fi.Length));<br />
+                    s = s.Replace("&lt;&lt;DATE&gt;&gt;", fi.LastWriteTime.ToShortDateString());<br />
+                    s = s.Replace("&lt;&lt;ATTS&gt;&gt;", fi.Attributes.ToString());<br />
+                    sb.Append(s);<br />
+                    }<br />
+                    sb.Append("}");<br />
+                    <font color="green">// RTF 文字列を表示します。</font><br />
+                    C1.C1Pdf.C1PdfDocument _c1pdf = new C1.C1Pdf.C1PdfDocument();<br />
+                    RectangleF rect = _c1pdf.PageRectangle;<br />
+                    rect.Inflate(-72, -72);<br />
+                    _c1pdf.DrawStringRtf(sb.ToString(), Font, Brushes.Black, rect);<br />
+                    <font color="green">// 保存します。</font><br />
+                    _c1pdf.Save(@"c:\temp\dir.pdf");</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<p>コードはとても簡単です。唯一複雑な部分は RTF 定義ですが、これはワードパッドで作成された RTF ファイルからコピー＆ペーストされました。RTF テンプレートの文字列には、後で実際のコンテンツに置き換えられるタグ（「&lt;&lt;NAME&gt;&gt;」など）が含まれています。</p>
+
+<p>RTF 文字列がビルドされると、DrawStringRtf コマンドを使用して PDF ドキュメントに表示されます。結果は次のようになります。</p><br />
+<img border="0" alt="" src="Images_jp/Rtf.png" />
+            <a name="seealsobookmark"></a>
+            
+        
+    </div>
+    <div id="FooterContent">
+        
+<p>&nbsp;</p><p>&nbsp;</p><hr style="height: 1px" /><p>Copyright &copy; GrapeCity inc. All rights reserved.
+<script>
+$(document).ready(function() {
+  if (!(window.self !== window.top)) {
+    // Not running in a frameset
+    // Get the page name
+    var pageName = location.href.substring(location.href.lastIndexOf("/") + 1);
+    if (pageName.indexOf("#") != -1) {
+      pageName = pageName.substring(0, pageName.indexOf("#"));
+    }
+    // Append to index.html
+    var framePage = "index.html#" + pageName;
+    location.href = framePage;
+  }
+});
+</script></p>
+
+    </div>
+    
+</body>
+</html>

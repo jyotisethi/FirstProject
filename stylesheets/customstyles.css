@@ -1,0 +1,6 @@
+﻿/* This StyleSheet contains custom styles for this project */
+
+.SyntaxTable pre {
+   white-space: pre-wrap;
+   }
+hr { background-color: black; height: 1px; border: 0; }

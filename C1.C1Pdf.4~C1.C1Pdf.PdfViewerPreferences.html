@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=shift_jis">
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+
+    
+
+    
+
+    <title>PdfViewerPreferences クラス</title>
+    <meta name="Title" content="PdfViewerPreferences クラス"/>    
+    
+    <script src="script/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script"></script>
+    <script src="script/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
+    <link rel="styleSheet" type="text/css" href="stylesheets/jquery-ui-1.8.18.custom.css" />
+    <link rel="styleSheet" type="text/css" href="stylesheets/jquery.qtip.css" />
+	
+    
+	
+
+    <link rel="styleSheet" type="text/css" href="stylesheets/dx.net.2012.css" data-mshv2-stylesheet="/stylesheets/dx.net.2012.mshv2.css" data-mshv1-stylesheet="/stylesheets/dx.net.2012.mshv1.css" />
+    <script src="script/dx.net.jqueryplugins.2012.min.js" type="text/javascript"></script>
+    <script src="script/dx.net.2012.js" type="text/javascript"></script>
+    
+    <meta name="Microsoft.Help.Id" content="C1.C1Pdf.4~C1.C1Pdf.PdfViewerPreferences"/>
+    <meta name="Description" content="ビューアでドキュメントを表示する時に使用されるオプションを表します。" />
+    <meta name="Microsoft.Help.TocParent" content="C1.C1Pdf.4~C1.C1Pdf_namespace"/>
+    <meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="Microsoft.Help.F1" content="C1.C1Pdf.PdfViewerPreferences"/>
+    
+    
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="stylesheets/slimbox2.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-jquery-common.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-jquery-slimbox.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-jquery-expand.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-expandcollapse.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-boxes.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/customstyles.css"></link>
+    <script src="script/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="script/slimbox2.js" type="text/javascript"></script>
+    <script src="script/hs-jquery-common.js" type="text/javascript"></script>
+    <script src="script/jquery-expand.js" type="text/javascript"></script>
+    <script src="script/hs-expandcollapse.js" type="text/javascript"></script>
+    <script src="script/jquery.fitvids.js" type="text/javascript"></script>
+    <script src="script/swfobject.js" type="text/javascript"></script>
+
+    
+    
+
+    
+
+    <!-- Google Analytics -->
+<script>
+if (location.protocol == "http:" || location.protocol == "https:") {
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-20295802-3', 'auto');
+ga('send', 'pageview');
+}
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+    <div id="BeforeHeaderContent">
+        
+    </div>
+    <div id="HeaderContent">
+        
+            
+            <div id="ProjectTitle">PDF for .NET</div>
+        <div id="PageTitle"><div id="PageTitleText">PdfViewerPreferences クラス</div></div>
+    </div>
+    <div id="AfterHeaderContent">
+        <a class="PageLink" href="C1.C1Pdf.4~C1.C1Pdf.PdfViewerPreferences_members.html">メンバ</a>&nbsp;
+                    <!-- Spacing --> <span id="ToggleAllSectionsLink" class="FunctionLink">
+                <label id="CollapseAllLabel">すべて折りたたむ</label>
+                <label id="ExpandAllLabel" style="display: none;">全て展開</label>
+            </span><!-- Spacing --> <span id="LanguageFilterPopupLink" class="PopupLink" data-popupcontentsource="#LanguageCheckboxes" data-popuptitle='言語のフィルタ'>
+                <label id="ShowAllLabel" for="LanguageFilterPopupLink">
+                    言語のフィルタ : すべて
+                </label>
+                <label id="MultipleLabel" for="LanguageFilterPopupLink" style="display: none;">
+                    言語のフィルタ : 複数
+                </label>
+                <label id="VBAllLabel" for="LanguageFilterPopupLink" style="display: none;">
+                    言語のフィルタ: Visual Basic
+                </label>				
+                
+<label id="VBLabel" for="LanguageFilterPopupLink" style="display: none;">言語のフィルタ: Visual Basic (宣言)</label>
+<label id="CSLabel" for="LanguageFilterPopupLink" style="display: none;">言語のフィルタ: C#</label>
+
+            </span>
+            <div class="PopupContent" id="LanguageCheckboxes">
+                
+<input data-languagename="VB" id="VBLanguageCheckbox" type="checkbox" class="ToggleLanguageCheckbox" checked="true" data-toggleclass="FilteredContentVB"/>
+<label class="LanguageFilter" for="VBCheckbox">
+Visual Basic (宣言)
+</label>
+<br /><input data-languagename="CS" id="CSLanguageCheckbox" type="checkbox" class="ToggleLanguageCheckbox" checked="true" data-toggleclass="FilteredContentCS"/>
+<label class="LanguageFilter" for="CSCheckbox">
+C#
+</label>
+
+            </div>
+    </div>
+    <div class="BreadcrumbsContainer"><table><tr><td>
+<a href="C1.C1Pdf.4.html">C1.C1Pdf.4 アセンブリ</a>
+ > <a href="C1.C1Pdf.4~C1.C1Pdf_namespace.html">C1.C1Pdf 名前空間</a>
+ : PdfViewerPreferences クラス</td></tr></table></div>
+    
+    
+    <div id="BodyContent">
+        <div class="DescriptionContent">ビューアでドキュメントを表示する時に使用されるオプションを表します。</div>
+            <div class="SectionHeading" id="objectmodelSectionHeading"><span class="SectionHeadingIcon"><!-- --></span><span class="SectionHeadingText">オブジェクト モデル</span></div><div id="objectmodelSectionContent" class="SectionContent"><map id="dxdiagram" name="dxdiagram"><area shape="rect" coords="2,2,134,25" href="C1.C1Pdf.4~C1.C1Pdf.PdfViewerPreferences.html" alt="PdfViewerPreferences クラス" /></map><img border="0" src="dotnetdiagramimages/C1_C1Pdf_4_C1_C1Pdf_PdfViewerPreferences.png" usemap="#dxdiagram" /></div>
+            <div class="SectionHeading" id="syntaxSectionHeading"><span class="SectionHeadingIcon"><!-- --></span><span class="SectionHeadingText">構文</span></div><div id="syntaxSectionContent" class="SectionContent">
+            <div class="TabContainer" id="TabContainer">
+            <ul>
+            
+            <li class="FilteredContentVBAll"><a href="#Syntax-VBAll">Visual Basic</a></li>
+        
+
+            <li class="FilteredContentCS"><a href="#Syntax-CS">C#</a></li>
+        
+
+            </ul>
+            
+            <div id="Syntax-VB" class="FilteredContentVB">
+            <pre>'宣言
+&nbsp;
+Public Class PdfViewerPreferences </pre>
+            </div>
+        
+
+            <div id="Syntax-CS" class="FilteredContentCS">
+            <pre>public class PdfViewerPreferences </pre>
+            </div>
+        
+
+            </div>
+        </div>
+            
+            
+            
+            
+            <a name="exampleBookmark"></a>
+            
+            
+            
+            
+            <div class="SectionHeading" id="inheritanceSectionHeading"><span class="SectionHeadingIcon"><!-- --></span><span class="SectionHeadingText">継承階層</span></div><div id="inheritanceSectionContent" class="SectionContent"><P>System.Object<BR />&nbsp;&nbsp;&nbsp;<STRONG>C1.C1Pdf.PdfViewerPreferences</STRONG><BR /></P></div>
+            
+            <a name="seealsobookmark"></a>
+            <div class="SectionHeading" id="seealsoSectionHeading"><span class="SectionHeadingIcon"><!-- --></span><span class="SectionHeadingText">参照</span></div><div id="seealsoSectionContent" class="SectionContent"><h4 class="subHeading"></h4><p><a href="C1.C1Pdf.4~C1.C1Pdf.PdfViewerPreferences_members.html">PdfViewerPreferences メンバ</a>
+<br/><a href="C1.C1Pdf.4~C1.C1Pdf_namespace.html">C1.C1Pdf 名前空間</a>
+</p>
+</div>
+        
+    </div>
+    <div id="FooterContent">
+        
+
+
+    </div>
+    
+</body>
+</html>

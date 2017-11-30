@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=shift_jis">
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+
+    
+
+    
+
+    <title>DrawStringRtf(String,Font,Brush,RectangleF,Int32) メソッド</title>
+    <meta name="Title" content=""/>    
+    
+    <script src="script/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script"></script>
+    <script src="script/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
+    <link rel="styleSheet" type="text/css" href="stylesheets/jquery-ui-1.8.18.custom.css" />
+    <link rel="styleSheet" type="text/css" href="stylesheets/jquery.qtip.css" />
+	
+    
+	
+
+    <link rel="styleSheet" type="text/css" href="stylesheets/dx.net.2012.css" data-mshv2-stylesheet="/stylesheets/dx.net.2012.mshv2.css" data-mshv1-stylesheet="/stylesheets/dx.net.2012.mshv1.css" />
+    <script src="script/dx.net.jqueryplugins.2012.min.js" type="text/javascript"></script>
+    <script src="script/dx.net.2012.js" type="text/javascript"></script>
+    
+    <meta name="Microsoft.Help.Id" content="C1.C1Pdf.4~C1.C1Pdf.C1PdfDocument~DrawStringRtf(String,Font,Brush,RectangleF,Int32)"/>
+    <meta name="Description" content="RTF 文字列を指定された四角形内に指定された System.Drawing.Brushオブジェクトと System.Drawing.Fontオブジェクトで、文字列内の指定されたオフセットから描画します。" />
+    <meta name="Microsoft.Help.TocParent" content="C1.C1Pdf.4~C1.C1Pdf.C1PdfDocument~DrawStringRtf"/>
+    <meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="Microsoft.Help.F1" content="C1.C1Pdf.C1PdfDocument.DrawStringRtf(System.String,System.Drawing.Font,System.Drawing.Brush,System.Drawing.RectangleF,System.Int32)"/>
+    
+    
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="stylesheets/slimbox2.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-jquery-common.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-jquery-slimbox.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-jquery-expand.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-expandcollapse.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-boxes.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/customstyles.css"></link>
+    <script src="script/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="script/slimbox2.js" type="text/javascript"></script>
+    <script src="script/hs-jquery-common.js" type="text/javascript"></script>
+    <script src="script/jquery-expand.js" type="text/javascript"></script>
+    <script src="script/hs-expandcollapse.js" type="text/javascript"></script>
+    <script src="script/jquery.fitvids.js" type="text/javascript"></script>
+    <script src="script/swfobject.js" type="text/javascript"></script>
+
+    
+    
+
+    
+
+    <!-- Google Analytics -->
+<script>
+if (location.protocol == "http:" || location.protocol == "https:") {
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-20295802-3', 'auto');
+ga('send', 'pageview');
+}
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+    <div id="BeforeHeaderContent">
+        
+    </div>
+    <div id="HeaderContent">
+        
+            
+            <div id="ProjectTitle">PDF for .NET</div>
+        <div id="PageTitle"><div id="PageTitleText">DrawStringRtf(String,Font,Brush,RectangleF,Int32) メソッド</div></div>
+    </div>
+    <div id="AfterHeaderContent">
+        <a class="PageLink" href="#ExampleBookmark" onclick="javascript:dxOpenSectionById('exampleSectionHeader');">使用例</a>&nbsp;<!-- Spacing --> <span id="ToggleAllSectionsLink" class="FunctionLink">
+                <label id="CollapseAllLabel">すべて折りたたむ</label>
+                <label id="ExpandAllLabel" style="display: none;">全て展開</label>
+            </span><!-- Spacing --> <span id="LanguageFilterPopupLink" class="PopupLink" data-popupcontentsource="#LanguageCheckboxes" data-popuptitle='言語のフィルタ'>
+                <label id="ShowAllLabel" for="LanguageFilterPopupLink">
+                    言語のフィルタ : すべて
+                </label>
+                <label id="MultipleLabel" for="LanguageFilterPopupLink" style="display: none;">
+                    言語のフィルタ : 複数
+                </label>
+                <label id="VBAllLabel" for="LanguageFilterPopupLink" style="display: none;">
+                    言語のフィルタ: Visual Basic
+                </label>				
+                
+<label id="VBLabel" for="LanguageFilterPopupLink" style="display: none;">言語のフィルタ: Visual Basic (宣言)</label>
+<label id="CSLabel" for="LanguageFilterPopupLink" style="display: none;">言語のフィルタ: C#</label>
+
+            </span>
+            <div class="PopupContent" id="LanguageCheckboxes">
+                
+<input data-languagename="VB" id="VBLanguageCheckbox" type="checkbox" class="ToggleLanguageCheckbox" checked="true" data-toggleclass="FilteredContentVB"/>
+<label class="LanguageFilter" for="VBCheckbox">
+Visual Basic (宣言)
+</label>
+<br /><input data-languagename="CS" id="CSLanguageCheckbox" type="checkbox" class="ToggleLanguageCheckbox" checked="true" data-toggleclass="FilteredContentCS"/>
+<label class="LanguageFilter" for="CSCheckbox">
+C#
+</label>
+
+            </div>
+    </div>
+    <div class="BreadcrumbsContainer"><table><tr><td>
+<a href="C1.C1Pdf.4.html">C1.C1Pdf.4 アセンブリ</a>
+ > <a href="C1.C1Pdf.4~C1.C1Pdf_namespace.html">C1.C1Pdf 名前空間</a>
+ > <a href="C1.C1Pdf.4~C1.C1Pdf.C1PdfDocument.html">C1PdfDocument クラス</a>
+ > <a href="C1.C1Pdf.4~C1.C1Pdf.C1PdfDocument~DrawStringRtf.html">DrawStringRtf メソッド</a>
+ : DrawStringRtf(String,Font,Brush,RectangleF,Int32) メソッド</td></tr></table></div>
+    
+    
+    
+<div id="textPopupContent" class="PopupContent">
+描画する RTF 文字列。
+</div>
+<div id="fontPopupContent" class="PopupContent">
+描画する文字列の外観とサイズを定義する <strong>System.Drawing.Font</strong>オブジェクト。
+</div>
+<div id="brushPopupContent" class="PopupContent">
+描画する文字列の色を定義する <strong>System.Drawing.Brush</strong>オブジェクト。
+</div>
+<div id="rcPopupContent" class="PopupContent">
+描画する文字列の位置をページの左上隅からのポイント数で指定する <strong>System.Drawing.RectangleF</strong>構造体。
+</div>
+<div id="firstCharPopupContent" class="PopupContent">
+描画する最初の文字のインデックス（通常は前回実行した <b>DrawStringRtf</b>の戻り値を使用します）。
+</div>
+
+    <div id="BodyContent">
+        <div class="DescriptionContent">RTF 文字列を指定された四角形内に指定された <strong>System.Drawing.Brush</strong>オブジェクトと <strong>System.Drawing.Font</strong>オブジェクトで、文字列内の指定されたオフセットから描画します。</div>
+            
+            
+            <div class="SectionHeading" id="syntaxSectionHeading"><span class="SectionHeadingIcon"><!-- --></span><span class="SectionHeadingText">構文</span></div><div id="syntaxSectionContent" class="SectionContent">
+            <div class="TabContainer" id="TabContainer">
+            <ul>
+            
+            <li class="FilteredContentVBAll"><a href="#Syntax-VBAll">Visual Basic</a></li>
+        
+
+            <li class="FilteredContentCS"><a href="#Syntax-CS">C#</a></li>
+        
+
+            </ul>
+            
+            <div id="Syntax-VB" class="FilteredContentVB">
+            <pre>'宣言
+&nbsp;
+Public Overloads Function DrawStringRtf( _
+&nbsp;&nbsp;&nbsp;ByVal <i><a class="PopupLink" id="textPopupLink" data-popupcontentsource="#textPopupContent" data-popupshowevent="click mouseenter">text</a></i> As System.String, _
+&nbsp;&nbsp;&nbsp;ByVal <i><a class="PopupLink" id="fontPopupLink" data-popupcontentsource="#fontPopupContent" data-popupshowevent="click mouseenter">font</a></i> As System.Drawing.Font, _
+&nbsp;&nbsp;&nbsp;ByVal <i><a class="PopupLink" id="brushPopupLink" data-popupcontentsource="#brushPopupContent" data-popupshowevent="click mouseenter">brush</a></i> As System.Drawing.Brush, _
+&nbsp;&nbsp;&nbsp;ByVal <i><a class="PopupLink" id="rcPopupLink" data-popupcontentsource="#rcPopupContent" data-popupshowevent="click mouseenter">rc</a></i> As System.Drawing.RectangleF, _
+&nbsp;&nbsp;&nbsp;ByVal <i><a class="PopupLink" id="firstCharPopupLink" data-popupcontentsource="#firstCharPopupContent" data-popupshowevent="click mouseenter">firstChar</a></i> As System.Integer _
+) As System.Integer</pre>
+            </div>
+        
+
+            <div id="Syntax-CS" class="FilteredContentCS">
+            <pre>public System.int DrawStringRtf( 
+&nbsp;&nbsp;&nbsp;System.string <i><a class="PopupLink" id="textPopupLink" data-popupcontentsource="#textPopupContent" data-popupshowevent="click mouseenter">text</a></i>,
+&nbsp;&nbsp;&nbsp;System.Drawing.Font <i><a class="PopupLink" id="fontPopupLink" data-popupcontentsource="#fontPopupContent" data-popupshowevent="click mouseenter">font</a></i>,
+&nbsp;&nbsp;&nbsp;System.Drawing.Brush <i><a class="PopupLink" id="brushPopupLink" data-popupcontentsource="#brushPopupContent" data-popupshowevent="click mouseenter">brush</a></i>,
+&nbsp;&nbsp;&nbsp;System.Drawing.RectangleF <i><a class="PopupLink" id="rcPopupLink" data-popupcontentsource="#rcPopupContent" data-popupshowevent="click mouseenter">rc</a></i>,
+&nbsp;&nbsp;&nbsp;System.int <i><a class="PopupLink" id="firstCharPopupLink" data-popupcontentsource="#firstCharPopupContent" data-popupshowevent="click mouseenter">firstChar</a></i>
+)</pre>
+            </div>
+        
+
+            </div>
+        
+            <h4 class=dxh4>パラメータ</h4><dl><dt><I>text</I></dt>
+<dd>描画する RTF 文字列。</dd><dt><I>font</I></dt>
+<dd>描画する文字列の外観とサイズを定義する <strong>System.Drawing.Font</strong>オブジェクト。</dd><dt><I>brush</I></dt>
+<dd>描画する文字列の色を定義する <strong>System.Drawing.Brush</strong>オブジェクト。</dd><dt><I>rc</I></dt>
+<dd>描画する文字列の位置をページの左上隅からのポイント数で指定する <strong>System.Drawing.RectangleF</strong>構造体。</dd><dt><I>firstChar</I></dt>
+<dd>描画する最初の文字のインデックス（通常は前回実行した <b>DrawStringRtf</b>の戻り値を使用します）。</dd></dl>
+            
+            <h4 class=dxh4>戻り値の型</h4><div class="ReturnsContent">指定された四角形に収まらないために出力されなかった最初の文字のインデックス。または、文字列全体が描画された場合は <strong>int.MaxValue</strong>の値。</div></div>
+            
+            
+            
+            <div class="SectionHeading" id="remarksSectionHeading"><span class="SectionHeadingIcon"><!-- --></span><span class="SectionHeadingText">解説</span></div><div id="remarksSectionContent" class="SectionContent"><p>このメソッドは <a href="C1.C1Pdf.4~C1.C1Pdf.C1PdfDocument~MeasureString(String,Font,Single).html">MeasureString(String,Font,Single)</a>に似ていますが、 <strong>System.Windows.Forms.RichTextBox</strong>コントロールで使用されるような RTF（リッチテキスト形式）文字列を認識する点が異なります。</p>
+
+<p>RTF 文字列には、次の２つの種類があります。</p>
+
+<p>1) Font テーブルと Color テーブルを含む、完全な RTF 文字列。このタイプの文字列は、 <strong>System.Windows.Forms.RichTextBox</strong>コントロールの Rtf プロパティや、ディスクに保存された RTF ファイルから得ることができます。このタイプの文字列を使用する場合、 <a id="fontParameterLink" class="PopupLink" data-popupcontentsource="#fontPopupContent" data-popupshowevent="click mouseenter" name="fontParameterLink">font</a>引数と <a id="brushParameterLink" class="PopupLink" data-popupcontentsource="#brushPopupContent" data-popupshowevent="click mouseenter" name="brushParameterLink">brush</a>引数は無視されます。</p>
+
+<p>2) RTF ヘッダが無く、埋め込みの RTF タグを含む RTF 文字列の一部。このタイプの文字列はコードで構築することが容易で、太字や斜体などの特殊な属性（例えば {\b 太字} や {\i 斜体} など）を持つテキストを描画する際に使用できます。このタイプの文字列を使用する場合、自動的に RTF ヘッダを構築するために <a id="fontParameterLink" class="PopupLink" data-popupcontentsource="#fontPopupContent" data-popupshowevent="click mouseenter" name="fontParameterLink">font</a>引数と <a id="brushParameterLink" class="PopupLink" data-popupcontentsource="#brushPopupContent" data-popupshowevent="click mouseenter" name="brushParameterLink">brush</a>引数が使用されます。</p>
+
+<p><b>DrawStringRtf</b>メソッドは、出力四角形に収まらないために出力されなかった最初の文字のインデックスを返します。この値を使用して、テキストを次のページに、またはページ内の次のフレームに連続的に配置できます。この値は、RTF 入力自体のインデックスではなく、RTF で表されたテキスト内のインデックスであることに注意してください。下の例を参照してください。</p></div>
+            <a name="exampleBookmark"></a>
+            <div class="SectionHeading" id="exampleSectionHeading"><span class="SectionHeadingIcon"><!-- --></span><span class="SectionHeadingText">使用例</span></div><div id="exampleSectionContent" class="SectionContent">次のコードは長い文字列を複数のページに描画します。出力を続行する位置を決定するために、 <a href="C1.C1Pdf.4~C1.C1Pdf.C1PdfDocument~DrawString(String,Font,Brush,RectangleF,StringFormat).html">DrawString(String,Font,Brush,RectangleF,StringFormat)</a>メソッドの戻り値を使用します。
+            
+             <div class="FilteredContentCS">
+    
+	<div class="TabContainer">
+	    <ul>
+	        <li><a href="#TabContent-abef183b-0160-4baa-b6a7-7441834e0712">C#</a></li>
+	    </ul>
+	    <div id="TabContent-abef183b-0160-4baa-b6a7-7441834e0712" class="FilteredContent"><pre><span style="color: #008000; ">// &#12506;&#12540;&#12472;&#22235;&#35282;&#24418;&#12434;&#35336;&#31639;&#12375;&#12414;&#12377;
+</span>RectangleF rcPage = _c1pdf.PageRectangle;
+rcPage.Inflate(-72, -72);
+            
+<span style="color: #008000; ">// &#25551;&#30011;&#12377;&#12427; RTF &#12434;&#21462;&#24471;&#12375;&#12414;&#12377;
+</span><span style="color: #0000FF; ">string</span> text = richTextBox1.Rtf;
+            
+<span style="color: #008000; ">// &#35079;&#25968;&#12398;&#12506;&#12540;&#12472;&#12395;&#12414;&#12383;&#12364;&#12427; RTF &#25991;&#23383;&#21015;&#12434;&#21360;&#21047;&#12375;&#12414;&#12377;
+</span>_c1pdf.Clear();
+<span style="color: #0000FF; ">for</span> (<span style="color: #0000FF; ">int</span> start = 0; start &lt; <span style="color: #0000FF; ">int</span>.MaxValue; )
+{
+    <span style="color: #0000FF; ">if</span> (start &gt; 0) _c1pdf.NewPage();
+    start = _c1pdf.DrawStringRtf(text, Font, 
+        Brushes.Black, rcPage, start);
+}
+            
+<span style="color: #008000; ">// &#32080;&#26524;&#12434;&#34920;&#31034;&#12375;&#12414;&#12377;
+</span><span style="color: #0000FF; ">string</span> fn = <span style="color: #800000; ">@&quot;c:\temp\test\rtf.pdf&quot;</span>;
+_c1pdf.Save(fn);
+System.Diagnostics.Process.Start(fn);</pre></div>
+	</div>
+</div>
+</div>
+            
+            
+            <a name="seealsobookmark"></a>
+            <div class="SectionHeading" id="seealsoSectionHeading"><span class="SectionHeadingIcon"><!-- --></span><span class="SectionHeadingText">参照</span></div><div id="seealsoSectionContent" class="SectionContent"><h4 class="subHeading"></h4><p><a href="C1.C1Pdf.4~C1.C1Pdf.C1PdfDocument.html">C1PdfDocument クラス</a>
+<br/><a href="C1.C1Pdf.4~C1.C1Pdf.C1PdfDocument_members.html">C1PdfDocument メンバ</a>
+<br/><a href="C1.C1Pdf.4~C1.C1Pdf.C1PdfDocument~DrawStringRtf.html">オーバーロード一覧</a>
+</p>
+</div>
+        
+    </div>
+    <div id="FooterContent">
+        
+
+
+    </div>
+    
+</body>
+</html>

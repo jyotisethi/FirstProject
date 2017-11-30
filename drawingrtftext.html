@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=shift_jis">
+    <meta http-equiv="X-UA-Compatible" value="IE=9" />
+
+    
+
+    
+
+    <title>RTF テキストの描画</title>
+    <meta name="Title" content="RTF テキストの描画"/>    
+    
+    <script src="script/jquery-1.7.2.min.js" type="text/javascript" id="mshs_support_script"></script>
+    <script src="script/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
+    <link rel="styleSheet" type="text/css" href="stylesheets/jquery-ui-1.8.18.custom.css" />
+    <link rel="styleSheet" type="text/css" href="stylesheets/jquery.qtip.css" />
+	
+    
+	
+
+    <meta name="Description" content="
+    全て展開
+
+
+
+    すべて折りたたむ
+
+
+DrawString は、単一のフォントと単色を使用して段落を描画するときに必要なすべての機能を提供します。" />
+    
+    <link rel="styleSheet" type="text/css" href="stylesheets/topics.2012.css" data-mshv2-stylesheet="/stylesheets/topics.2012.mshv2.css" data-mshv1-stylesheet="/stylesheets/topics.2012.mshv1.css" />
+    <script src="script/topics.jqueryplugins.2012.min.js" type="text/javascript"></script>
+    <script src="script/topics.2012.js" type="text/javascript"></script>
+    
+    <meta name="Microsoft.Help.Id" content="4d185669-20a5-4be1-9211-c35d81456315"/>
+    <meta name="Microsoft.Help.TocParent" content="fc4ab6ac-8d92-497e-9128-1f4b65d9d78e"/>
+    <meta name="Microsoft.Help.TocOrder" content="4"/>
+    <meta name="Microsoft.Help.F1" content=""/>
+    <meta name="Microsoft.Help.ContentType" content="Concepts" />
+    
+    
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-expandcollapse.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/slimbox2.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-jquery-common.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-jquery-slimbox.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-jquery-expand.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/hs-boxes.css"></link>
+    <link rel="stylesheet" type="text/css" href="stylesheets/customstyles.css"></link>
+    <script src="script/hs-expandcollapse.js" type="text/javascript"></script>
+    <script src="script/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="script/slimbox2.js" type="text/javascript"></script>
+    <script src="script/hs-jquery-common.js" type="text/javascript"></script>
+    <script src="script/jquery-expand.js" type="text/javascript"></script>
+    <script src="script/jquery.fitvids.js" type="text/javascript"></script>
+    <script src="script/swfobject.js" type="text/javascript"></script>
+
+    
+    
+
+    
+
+    <!-- Google Analytics -->
+<script>
+if (location.protocol == "http:" || location.protocol == "https:") {
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-20295802-3', 'auto');
+ga('send', 'pageview');
+}
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+    <div id="BeforeHeaderContent">
+        
+    </div>
+    <div id="HeaderContent">
+        
+            
+            <div id="ProjectTitle">PDF for .NET</div>
+        <div id="PageTitle"><div id="PageTitleText">RTF テキストの描画</div></div>
+    </div>
+    <div id="AfterHeaderContent">
+        <!-- Spacing --> <span id="ToggleAllSectionsLink" class="FunctionLink">
+                <label id="CollapseAllLabel">すべて折りたたむ</label>
+                <label id="ExpandAllLabel" style="display: none;">全て展開</label>
+            </span>
+        
+    </div>
+    <div class="BreadcrumbsContainer"><table><tr><td>
+<a href="usingcomponentonepdf.html">PDF for .NET の使い方</a>
+ > <a href="addingtext.html">テキスト</a>
+ > RTF テキストの描画</td></tr></table></div>
+    
+    
+    <div id="BodyContent">
+        <div id="HSShowAll" align="right">
+    <a onclick="showAllDropDownSections();" href="#"><img border="0" alt="全て展開" src="images/hs-toggler-collapsed.png" />全て展開</a>
+</div>
+
+<div id="HSHideAll" align="right">
+    <a onclick="hideAllDropDownSections();" href="#"><img border="0" alt="すべて折りたたむ" src="images/hs-toggler-expanded.png" />すべて折りたたむ</a>
+</div>
+
+<p><a href="C1.C1Pdf.4~C1.C1Pdf.C1PdfDocument~DrawString.html">DrawString</a> は、単一のフォントと単色を使用して段落を描画するときに必要なすべての機能を提供します。</p>
+
+<p>複数のフォントと複数の色を組み合わせて、リッチテキスト形式で段落を描画する場合、代わりに DrawStringRtf メソッドを使用する必要があります。DrawStringRtf は&nbsp;DrawString と似ていますが、テキストを RTF として解釈する点が異なります。</p>
+
+<p></p>
+
+<p>たとえば以下のコードでは、太字と斜体文字を含む１行のテキストを描出します。</p>
+
+<p class="hs-toggler">Visual Basic コードの書き方<br /></p>
+
+<div class="hs-toggler-container" style="DISPLAY: none">
+    <div class="FilteredContentVB" data-title="VB" data-itemid="VB">
+        <table class="SyntaxTable">
+            <tbody>
+                <tr>
+                    <th>Visual Basic</th>
+
+                    <th>
+                        <div class="CopyCodeWrapper">
+                            <span class="CopyCode">コードのコピー</span>
+                        </div>
+                    </th>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <pre>
+Dim font As New Font("Arial", 12)
+Dim rect As RectangleF = pdf.PageRectangle
+rect.Inflate(- 72, - 72)
+Dim s As String
+s = "To {\b boldly} go where {\i no one} has gone before!"
+C1pdf.DrawStringRtf(s, font, Brushes.Black, rect)
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<p class="hs-toggler">C# コードの書き方<br /></p>
+
+<div class="hs-toggler-container" style="DISPLAY: none">
+    <div class="FilteredContentCS" data-title="CS" data-itemid="CS">
+        <table class="SyntaxTable">
+            <tbody>
+                <tr>
+                    <th>C#</th>
+
+                    <th>
+                        <div class="CopyCodeWrapper">
+                            <span class="CopyCode">コードのコピー</span>
+                        </div>
+                    </th>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <pre>
+Font font = new Font("MS PGothic", 12);
+RectangleF rect = c1PdfDocument1.PageRectangle;
+rect.Inflate(-72, -72);
+c1PdfDocument1.DrawStringRtf(@"To {\b boldly} go where {\i no one} has gone before!", font, Brushes.Black, rect);
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<p>このテキストは、完全な RTF ドキュメントを含まないことに注意してください。このテキストは、\rtf１ のヘッダ、フォント、色のいずれのテーブルも持っていません。DrawStringRtf メソッドはそれを認識し、提供された <em>Font</em> 引数と <em>Brush</em> 引数に基づいて必要な RTF ヘッダを自動的に構築します。</p>
+
+<p>テキストが完全な RTF ヘッダを含んでいた場合、その RTF ヘッダを DrawStringRtf への呼び出しで指定した Font 引数と Brush 引数の代わりに使用します。これが当てはまるのは、テキストを <strong>RichTextBox</strong> コントロールからコピーしたか、RTF ファイルから読み込んだ場合です。</p>
+            <a name="seealsobookmark"></a>
+            
+        
+    </div>
+    <div id="FooterContent">
+        
+<p>&nbsp;</p><p>&nbsp;</p><hr style="height: 1px" /><p>Copyright &copy; GrapeCity inc. All rights reserved.
+<script>
+$(document).ready(function() {
+  if (!(window.self !== window.top)) {
+    // Not running in a frameset
+    // Get the page name
+    var pageName = location.href.substring(location.href.lastIndexOf("/") + 1);
+    if (pageName.indexOf("#") != -1) {
+      pageName = pageName.substring(0, pageName.indexOf("#"));
+    }
+    // Append to index.html
+    var framePage = "index.html#" + pageName;
+    location.href = framePage;
+  }
+});
+</script></p>
+
+    </div>
+    
+</body>
+</html>

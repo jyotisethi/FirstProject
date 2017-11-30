@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=shift_jis">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/websearch.css" />
+
+    <script src="script/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="script/jquery.cookie.min.js"></script>
+    <script src="ftsindex.js" type="text/javascript" charset="utf-8"></script>
+    <script src="script/fts.js" type="text/javascript" charset="utf-8"></script>
+    <script src="script/webhighlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="script/webutility.js" type="text/javascript" charset="utf-8"></script>
+    <script src="script/websearch.js" type="text/javascript"></script>
+
+    
+
+    <base target="webcontent">
+</head>
+
+<body>
+    <div style="display: none">
+        <span id="phrase_Search_SearchResults">
+            検索結果
+        </span>
+        <span id="phrase_Search_ResultCount">
+            件のデータが見つかりました。
+        </span>
+    </div>
+
+    <div id="divSearch">
+        <span>検索する用語：</span>
+
+        <div id="searchwhatcontainer">
+            <input id="search" type="button" value="検索" />
+            <div id="inputcontainer"><input id="txtSearch" type="text" name="txtSearch" /></div>
+        </div>
+
+        <div id="operators">（言葉はORおよびANDを使用して組み合わせることができます）</div>
+
+        <div id="highlightcontainer">
+            <label>
+                <input type="checkbox" id="highlight" />検索用語のハイライト表示</label>
+        </div>
+    </div>
+
+    <div id="divSearching" style="display: none">
+        <table id="tblProgress" border="0">
+            <tr>
+                <td>検索中...</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div id="divResults" style="display: none"></div>   
+</body>
+</html>
